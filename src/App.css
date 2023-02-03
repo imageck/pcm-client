@@ -1,38 +1,51 @@
-.App {
+.markdown-desc {
+  min-height: 8rem !important;
+  min-width: 50%;
+}
+
+img.card-img-top {
+  height: 180px;
+}
+
+.card-title {
+  height: 2.4em;
+}
+
+#lang-switch > ul {
+  min-width: 2rem;
+}
+
+.spinner-border {
+  min-width: 128px;
+  min-height: 128px;
+}
+
+/*
+table {
+  table-layout: fixed;
+}
+
+thead th:not(:first-child) {
+  min-width: 15em;
+}
+*/
+
+thead th {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+tr > td:nth-child(1) {
+  max-width: 5em;
+  direction: rtl;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+tr > td.num {
+  text-align: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+tr > td.check {
+  text-align: center;
 }
