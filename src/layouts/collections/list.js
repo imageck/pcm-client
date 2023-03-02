@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 import Loading from "./loading";
 import Error from "../error";
 
-axios.defaults.baseURL = "/api";
+axios.defaults.baseURL = "https://pcm-server-production.up.railway.app/api";
 
 export default function List({ url, n }) {
   let [{data, loading, error}] = useAxios({ method: "GET", url });
   if (loading) return <Loading n={n} />;
   if (error) return <Error code={error.response.status} />;
-  if (data)
+  if (data) { console.log(data);
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4">
      {
@@ -50,5 +50,5 @@ export default function List({ url, n }) {
       ))
      }
     </div>
-  );
+  )}
 }

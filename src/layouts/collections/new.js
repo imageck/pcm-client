@@ -5,7 +5,7 @@ import axios from "axios";
 import useAxios from "axios-hooks";
 import ExtraFields from "./extra-fields";
 
-axios.defaults.baseURL = "/api";
+axios.defaults.baseURL = "https://pcm-server-production.up.railway.app/api";
 
 export default function NewCollection() {
   const [desc, setDesc] = useState("");
